@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 
-import TodoApp from './TodoApp'
-import Header from './../containers/Header'
-import Features from './Features'
-import Signin from './../containers/auth/signin'
-import Logout from './../containers/auth/logout'
-import Signup from './../containers/auth/signup'
-import RequireAuth from './../containers/auth/requireAuth'
+import TodoApp from 'Components/TodoApp'
+import Header from 'Containers/Header'
+import Features from 'Components/Features'
+import Signin from 'Containers/auth/signin'
+import Logout from 'Containers/auth/logout'
+import Signup from 'Containers/auth/signup'
+import RequireAuth from 'Containers/auth/requireAuth'
 
 const Root = () => {
 	return (

@@ -1,8 +1,14 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import * as actions from '../actions/todo_actions'
+import * as actions from 'Actions/todo_actions'
 
-class TodoSearch extends Component {
+
+export default
+@connect((state) => { return {
+	showCompleted: state.showCompleted,
+	searchText: state.searchText
+}}, actions)
+export default class TodoSearch extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -41,11 +47,4 @@ class TodoSearch extends Component {
 	}
 }
 
-function mapStateToProps(state) {
-	return {
-		showCompleted: state.showCompleted,
-		searchText: state.searchText,
-	}
-}
 
-export default connect(mapStateToProps, actions)(TodoSearch)

@@ -4,7 +4,8 @@ import moment from 'moment'
 
 import * as actions from '../actions/todo_actions'
 
-class TodoItem extends Component {
+@connect(null, actions)
+export default class TodoItem extends Component {
 	render() {
 		const { _id, text, completed, createdAt, completedAt } = this.props
 		const todoClassName = completed ? 'todo todo-completed' : 'todo'
@@ -57,5 +58,3 @@ TodoItem.defaultProps = {
 	completed: false,
 	completedAt: null,
 }
-
-export default connect(null, actions)(TodoItem)

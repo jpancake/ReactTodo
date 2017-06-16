@@ -4,7 +4,8 @@ import { connect } from 'react-redux'
 import TodoItem from './TodoItem'
 import filterTodos from '../api/TodoAPI'
 
-class TodoList extends Component {
+@connect(state => state)
+export default class TodoList extends Component {
 	// TodoList renders depending on the filterTodos function.
 	render() {
 		const { todos, showCompleted, searchText } = this.props
@@ -24,8 +25,3 @@ class TodoList extends Component {
 	}
 }
 
-function mapStateToProps(state) {
-	return state
-}
-
-export default connect(mapStateToProps)(TodoList)

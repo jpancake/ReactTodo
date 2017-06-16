@@ -1,4 +1,3 @@
-/* globals localStorage */
 import axios from 'axios'
 import moment from 'moment'
 import {

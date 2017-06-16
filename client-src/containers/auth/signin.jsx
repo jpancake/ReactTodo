@@ -1,15 +1,10 @@
 import React, { Component } from 'react'
 import { Field, reduxForm } from 'redux-form'
 import { connect } from 'react-redux'
-import * as actions from '../../actions/user_actions'
-
-
-function mapStateToProps(state) {
-	return { errorMessage: state.auth.error }
-}
+import * as actions from 'Actions/user_actions'
 
 @reduxForm({ form: 'SigninForm' })
-@connect(mapStateToProps, actions)
+@connect((state) => { return { errorMessage: state.auth.error } }, actions)
 export default class Signin extends Component {
 	constructor(props) {
 		super(props)

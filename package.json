@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "eslint": "eslint --init",
-    "dev": "node devServer.js"
+    "dev": "node devServer.js",
+    "webpack": "webpack -p"
   },
   "dependencies": {
     "axios": "^0.16.2",

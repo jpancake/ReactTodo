@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import TodoSearch from '../containers/TodoSearch'
-import TodoList from '../containers/TodoList'
-import AddTodo from '../containers/AddTodo'
+import TodoSearch from 'Containers/TodoSearch'
+import TodoList from 'Containers/TodoList'
+import AddTodo from 'Containers/AddTodo'
 
-class TodoApp extends Component {
+export default class TodoApp extends Component {
 	render() {
 		return (
 			<section>
@@ -15,4 +15,3 @@ class TodoApp extends Component {
 	}
 }
 
-export default TodoApp

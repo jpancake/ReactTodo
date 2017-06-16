@@ -2,17 +2,13 @@ import React, { Component } from 'react'
 import _ from 'lodash'
 import { Field, reduxForm } from 'redux-form'
 import { connect } from 'react-redux'
-import * as actions from './../../actions/user_actions'
-
-function mapStateToProps(state) {
-	return { errorMessage: state.auth.error }
-}
+import * as actions from 'Actions/user_actions'
 
 @reduxForm({
 	form: 'SignupForm',
 	validate
 })
-@connect(mapStateToProps, actions)
+@connect((state) => { return { errorMessage: state.auth.error } }, actions)
 export default class Signup extends Component {
 	constructor(props) {
 		super(props)
@@ -29,13 +25,12 @@ export default class Signup extends Component {
 		}
 	}
 	renderAlert() {
-		if (this.props.errorMessage) {
+		if (this.props.errorMessage)
 			return (
 				<div className="alert alert-danger">
 					<strong>Oops!</strong> {this.props.errorMessage}
 				</div>
 			)
-		}
 	}
 	renderField(field) {
 		const { input, meta: { touched, error } } = field

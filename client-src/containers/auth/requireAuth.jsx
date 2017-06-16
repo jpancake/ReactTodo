@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 export default function(ComposedComponent) {
+	return @connect((state) => { return { authenticated: state.auth.authenticated } })
 	class Authentication extends Component {
 		static contextTypes = {
 			router: React.PropTypes.object
@@ -21,10 +22,4 @@ export default function(ComposedComponent) {
 			return <ComposedComponent {...this.props} />
 		}
 	}
-
-	function mapStateToProps(state) {
-		return { authenticated: state.auth.authenticated }
-	}
-
-	return connect(mapStateToProps)(Authentication)
 }

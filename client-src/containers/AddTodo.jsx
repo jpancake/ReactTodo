@@ -1,9 +1,10 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 
-import * as actions from '../actions/todo_actions'
+import * as actions from 'Actions/todo_actions'
 
-class AddTodo extends Component {
+@connect(null, actions)
+export default class AddTodo extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -46,9 +47,3 @@ AddTodo.propTypes = {
 	startAddTodo: PropTypes.func.isRequired,
 }
 
-
-// react-redux connects the action helper 'startAddTodo' onto the components props
-export default connect(null, actions)(AddTodo)
-
-
-// Add Todo main job is to take the input of the user and add it as an todo item.

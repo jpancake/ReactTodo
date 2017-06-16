@@ -22,16 +22,16 @@ module.exports = {
 		jquery: 'jQuery'
 	},
 	resolve: {
-		modules: ['node_modules', path.resolve(__dirname, 'client-src')],
+		modules: ['node_modules', 'client-src'],
 		extensions: ['.js', '.jsx', '.sass'],
 		mainFiles: ['index', 'configureStore', 'index_styles', 'reducers'],
 		alias: {
-			Components: path.resolve(__dirname, 'client-src/components'),
-			Containers: path.resolve(__dirname, 'client-src/containers'),
-			Actions: path.resolve(__dirname, 'client-src/actions'),
-			Styles: path.resolve(__dirname, 'client-src/styles'),
-			Reducers: path.resolve(__dirname, 'client-src/reducers'),
-			Store: path.resolve(__dirname, 'client-src/store')
+			'Components': path.resolve(__dirname, './client-src/components'),
+			'Containers': path.resolve(__dirname, 'client-src/containers'),
+			'Actions': path.resolve(__dirname, './client-src/actions'),
+			'Styles': path.resolve(__dirname, './client-src/styles'),
+			'Reducers': path.resolve(__dirname, './client-src/reducers'),
+			'Store': path.resolve(__dirname, './client-src/store'),
 		}
 	},
 	module: {
