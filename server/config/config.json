@@ -1,0 +1,10 @@
+{
+  "test": {
+    "MONGODB_URI": "mongodb://localhost:27017/TodoAppTest",
+    "JWT_SECRET": "dk39$H%OdjaW@042"
+  },
+  "development": {
+    "MONGODB_URI": "mongodb://localhost:27017/TodoApp",
+    "JWT_SECRET": "J@j4k(Ds@jrkeKDJxJDK9384(@3"
+  }
+}

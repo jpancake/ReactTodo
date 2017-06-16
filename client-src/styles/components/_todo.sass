@@ -1,0 +1,50 @@
+.todo
+  align-items: center
+  cursor: pointer
+  display: flex
+  padding: 1rem
+  transition: background .3s ease
+  p, input
+    margin: 0
+  &:hover
+    background: #f0f0f0
+  .flex-container:first-of-type
+    width: 75%
+    div:first-of-type
+      margin-right: 1rem
+  .flex-container:nth-child(2)
+    width: 25%
+.todo__subtext
+  color: #999
+  font-size: 0.65rem
+
+.todo-completed
+  p, .todo-subtext
+    color: $light-color
+    text-decoration: line-through
+
+.close
+  position: relative
+  display: inline-block
+  width: 20px
+  height: 20px
+  overflow: hidden
+  &:hover
+    &::before, &::after
+      background: #ed1212
+  &::before, &::after
+    content: ''
+    position: absolute
+    height: 2px
+    width: 100%
+    top: 50%
+    left: 0px
+    margin-top: -1px
+    background: #000
+  &::before
+    transform: rotate(45deg)
+  &::after
+    transform: rotate(-45deg)
+  &.rounded
+    &::before, &::after
+      border-radius: 5px
