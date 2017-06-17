@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import * as actions from 'Actions/todo_actions'
 
 
-export default
+
 @connect((state) => { return {
 	showCompleted: state.showCompleted,
 	searchText: state.searchText

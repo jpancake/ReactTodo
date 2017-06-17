@@ -8,7 +8,7 @@ import {
 
 import * as todoActions from './todo_actions'
 
-const ROOT_URL = 'http://localhost:8000/api'
+const ROOT_URL = '/api'
 
 export function authError(error) {
 	return {

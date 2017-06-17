@@ -4,7 +4,7 @@
     "JWT_SECRET": "dk39$H%OdjaW@042"
   },
   "development": {
-    "MONGODB_URI": "mongodb://localhost:27017/TodoApp",
+    "MONGODB_URI": "mongodb://pancake:secret@ds127842.mlab.com:27842/todoapp",
     "JWT_SECRET": "J@j4k(Ds@jrkeKDJxJDK9384(@3"
   }
 }

@@ -8,10 +8,9 @@ const bodyParser = require('body-parser')
 const config = require('./webpack.devConfig')
 const router = require('./server/router')
 
-const PORT = 8000
-
 // Server Setup
 require('./server/config/config')
+const PORT = 8000
 
 // MongoDB Setup
 require('./server/db/mongoose')
@@ -21,7 +20,7 @@ const server = new WebpackDevServer(webpack(config), {
 	port: PORT,
 	hot: true,
 	historyApiFallback: true,
-	compress: false,
+	compress: true,
 	setup: (app) => {
 		app.use(morgan('dev'))
 		app.use(bodyParser.json())

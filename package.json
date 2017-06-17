@@ -8,7 +8,8 @@
   "scripts": {
     "eslint": "eslint --init",
     "dev": "node devServer.js",
-    "webpack": "webpack -p"
+    "webpack": "webpack -p",
+    "start": "nodemon server.js"
   },
   "dependencies": {
     "axios": "^0.16.2",

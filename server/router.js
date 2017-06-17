@@ -2,12 +2,15 @@ const passport = require('passport')
 require('./services/passport')
 const user = require('./controllers/user')
 const todo = require('./controllers/todo')
+const bodyParser = require('body-parser')
+
 
 
 const requireAuth = passport.authenticate('jwt', { session: false })
 const requireLogin = passport.authenticate('local', { session: false })
 
 module.exports = (app) => {
+
 	// GET '/'
 	app.get('/api', requireAuth, (req, res) => {
 		res.send(['Hi', 'Im', 'Just', 'Testing'])

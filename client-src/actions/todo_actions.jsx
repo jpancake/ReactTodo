@@ -11,7 +11,7 @@ import {
 	REMOVE_TODO,
 } from './types'
 
-const ROOT_URL = 'http://localhost:8000/api'
+const ROOT_URL = '/api'
 
 export function setSearchText(searchText) {
 	return {
