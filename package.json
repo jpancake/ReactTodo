@@ -9,7 +9,7 @@
     "eslint": "eslint --init",
     "dev": "node devServer.js",
     "webpack": "webpack -p",
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "axios": "^0.16.2",
